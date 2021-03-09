@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>menu</title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+	<div id="logo">
+		Govinda
+	</div>
+	<div id="nav-side-links">
+		<a href="navbar.html" class="nav-link">Home</a>
+		<a href="page.html" class="nav-link">Sign In</a>
+		<a href="register.html" class="nav-link">Sign Up</a>
+	</div>
+</nav>
+
+	<!-- <nav id="menu">
+		<div id="logo">
+			Govinda
+		</div>
+		<div id="nav-side-links">
+			<a href="navbar.html" class="nav-link">Home</a>
+			<a href="page.html" class="nav-link">Sign In</a>
+			<a href="register.html" class="nav-link">Sign Up</a>
+		</div>
+	</nav> -->
+
+	<div id="main">
+			<table>	
+
+						<tr>
+							<th>	First Name</th>
+							<th>	Last Name</th>
+							<th>	Email</th>
+							
+
+						</tr>
+
+						<tr>	
+									<td id="fname">
+											
+									</td>
+
+									<td id="lname">
+											
+									</td>
+
+									
+
+									<td id="email">
+											
+									</td>
+						</tr>
+			</table>
+	</div>	
+	
+
+	<script type="text/javascript">
+
+		let userDetails = sessionStorage.getItem('jovinda')
+		console.log(userDetails);
+		userDetails  =JSON.parse(userDetails);
+		document.getElementById("fname").innerText = userDetails.fname;
+		document.getElementById("lname").innerText = userDetails.lname;
+		
+		document.getElementById("email").innerText = userDetails.email;
+	</script>
+
+
+
+</body>
+</html>
